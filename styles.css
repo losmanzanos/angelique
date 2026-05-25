@@ -310,7 +310,7 @@ header{
   aspect-ratio:4/5;
   border-radius:0;
   object-fit:cover;
-  filter:grayscale(25%) saturate(.65) contrast(.92);
+  filter:grayscale(10%) saturate(.85) contrast(.95);
   box-shadow:0 14px 40px rgba(31,42,51,.10);
 }
 
