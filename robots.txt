@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://pivotaltides.com/sitemap.xml
+
+# Delay for bots
+Crawl-delay: 2
+
+# Specific bot rules (discourage AI crawlers)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /

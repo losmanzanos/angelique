@@ -3,605 +3,168 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+<meta name="description" content="Marriage & family therapy in Murrieta, CA. Depth-oriented, insight-focused care for individuals & couples. Free 15-min consultation. Angelique Danza, LMFT.">
+<meta name="keywords" content="therapy, marriage counseling, couples therapy, LMFT, Murrieta, California">
+<meta name="author" content="Angelique Danza, LMFT">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f3f0ea">
+<link rel="canonical" href="https://pivotaltides.com/">
+<meta property="og:title" content="Pivotal Tides Therapy — Angelique Danza, LMFT · Murrieta, CA">
+<meta property="og:description" content="Depth-oriented, insight-focused therapy for individuals & couples navigating life's pivotal moments.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pivotaltides.com/">
+<meta property="og:image" content="https://pivotaltides.com/Assets/Hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pivotal Tides Therapy">
+<meta name="twitter:description" content="Marriage & family therapy in Murrieta, CA">
+<link rel="icon" href="Assets/favicon.svg" type="image/svg+xml">
+
 <title>Pivotal Tides Therapy — Angelique Danza, LMFT · Murrieta, CA</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
-<style>
-
-:root{
-  --bg:#f3f0ea;
-  --ink:#1f2a33;
-  --text:#4e5964;
-  --muted:#7b848e;
-  --accent:#b39b88;
-  --line:#e6ded4;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pivotal Tides",
+  "image": "https://pivotaltides.com/Assets/Hero.png",
+  "description": "Marriage and family therapy practice offering depth-oriented, insight-focused care",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Murrieta",
+    "addressLocality": "Murrieta",
+    "addressRegion": "CA",
+    "postalCode": "92563",
+    "addressCountry": "US"
+  },
+  "telephone": "(951) 476-1143",
+  "priceRange": "$175-$190",
+  "areaServed": ["Murrieta, CA", "Inland Empire, CA"],
+  "sameAs": ["https://pivotaltides.com"],
+  "url": "https://pivotaltides.com"
 }
-
-/* BASE RESET */
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  -webkit-font-smoothing:antialiased;
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Pivotal Tides",
+  "provider": {
+    "@type": "Person",
+    "name": "Angelique Danza",
+    "jobTitle": "Licensed Marriage and Family Therapist",
+    "credential": "LMFT",
+    "knowsAbout": ["Marriage Therapy", "Couples Counseling", "Individual Therapy", "Group Therapy", "Anxiety", "Depression", "Relationship Issues"],
+    "url": "https://pivotaltides.com"
+  },
+  "areaServed": "Murrieta, CA",
+  "telephone": "(951) 476-1143"
 }
-
-img{width:100%;display:block;}
-
-.container{width:min(1180px,92%);margin:auto;}
-
-/* TYPOGRAPHY */
-
-h1,h2,h3{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:500;
-  letter-spacing:-.02em;
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Angelique Danza",
+  "jobTitle": "Licensed Marriage and Family Therapist",
+  "worksFor": {
+    "@type": "LocalBusiness",
+    "name": "Pivotal Tides"
+  },
+  "knowsLanguage": "en",
+  "url": "https://pivotaltides.com",
+  "sameAs": ["https://pivotaltides.com"]
 }
-
-p{
-  color:var(--text);
-  line-height:1.9;
-}
-
-/* NAV */
-
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:999;
-  backdrop-filter:blur(18px);
-  background:rgba(243,240,234,.85);
-  border-bottom:1px solid rgba(0,0,0,.05);
-}
-
-.nav{
-  height:86px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.9rem;
-  letter-spacing:.08em;
-}
-
-.nav-links{
-  display:flex;
-  gap:2.5rem;
-  font-size:.75rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:#4b5563;
-}
-
-/* MOBILE NAV PREVIEW (STATIC MOCK) */
-.mobile-nav-preview{
-  display:none;
-  position:fixed;
-  top:86px;
-  left:0;
-  right:0;
-  background:rgba(243,240,234,.98);
-  border-bottom:1px solid var(--line);
-  padding:1.5rem 2rem;
-  font-size:.8rem;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  color:#4b5563;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(243,240,234,.96) 20%,
-      rgba(243,240,234,.84) 45%,
-      rgba(243,240,234,.25)
-    ),
-    url('Assets/Hero.png');
-
-  background-size:cover;
-  background-position:center;
-
-  filter: grayscale(30%) saturate(.6) contrast(.9) brightness(.97);
-}
-
-.hero-inner{
-  position:relative;
-  width:min(1180px,92%);
-  margin:auto;
-}
-
-.hero h1{
-  font-size:clamp(3.6rem,6vw,6.3rem);
-  line-height:1;
-  margin-bottom:1.2rem;
-}
-
-.hero-lede{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(1.5rem,2.2vw,2rem);
-  font-weight:400;
-  color:var(--ink);
-  font-style:italic;
-  max-width:620px;
-  line-height:1.35;
-  margin-bottom:1.8rem;
-}
-
-.eyebrow{
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin-bottom:1.4rem;
-}
-
-.hero p{
-  max-width:560px;
-  font-size:1.08rem;
-  margin-bottom:2.4rem;
-}
-
-.hero-meta{
-  display:flex;
-  gap:2.5rem;
-  font-size:.72rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--muted);
-  padding-top:1.8rem;
-  border-top:1px solid var(--line);
-  max-width:560px;
-}
-
-/* SECTIONS */
-
-.section{
-  padding:8.5rem 0;
-}
-
-.section-narrow{
-  padding:6rem 0;
-}
-
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:6rem;
-  align-items:center;
-}
-
-h2{
-  font-size:3.5rem;
-  margin-bottom:1.3rem;
-}
-
-/* IMAGES */
-
-.image img{
-  height:680px;
-  object-fit:cover;
-  filter: grayscale(25%) saturate(.65) contrast(.92);
-}
-
-/* CLINICIAN HEADSHOT (FULL COLOR PER REQUEST) */
-
-.headshot img{
-  height:520px;
-  object-fit:cover;
-}
-
-/* SERVICES */
-
-.services{
-  background:#faf8f5;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:2rem;
-  margin-top:4rem;
-}
-
-.card{
-  background:#fff;
-  padding:2.8rem;
-  border:1px solid rgba(0,0,0,.05);
-  display:flex;
-  flex-direction:column;
-}
-
-.card h3{
-  font-size:1.8rem;
-  margin-bottom:1.2rem;
-}
-
-.card p{
-  font-size:.97rem;
-  line-height:1.85;
-}
-
-/* SPECIALTIES */
-
-.specialties{
-  background:var(--bg);
-}
-
-.spec-top{
-  display:flex;
-  flex-wrap:wrap;
-  gap:1rem;
-  margin-top:2.4rem;
-  margin-bottom:3.5rem;
-}
-
-.spec-top span{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  font-style:italic;
-  color:var(--ink);
-  padding:.6rem 1.6rem;
-  border:1px solid var(--accent);
-  border-radius:999px;
-}
-
-.spec-eyebrow{
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:1.2rem;
-}
-
-.spec-list{
-  columns:3;
-  column-gap:3rem;
-  font-size:.95rem;
-  color:var(--text);
-  line-height:2.4;
-  border-top:1px solid var(--line);
-  padding-top:2.4rem;
-}
-
-.spec-list span{display:block;}
-
-/* QUOTE */
-
-.quote-section{
-  background:#faf8f5;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:9rem 0;
-  text-align:center;
-}
-
-.quote-section blockquote{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(1.8rem,3.2vw,2.8rem);
-  font-style:italic;
-  line-height:1.4;
-  max-width:880px;
-  margin:0 auto 2rem;
-  color:var(--ink);
-}
-
-.quote-section cite{
-  font-family:'Inter',sans-serif;
-  font-style:normal;
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--accent);
-}
-
-/* SESSION DETAILS STRIP */
-
-.details-strip{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:2.5rem;
-  margin-top:3.5rem;
-  padding-top:3rem;
-  border-top:1px solid var(--line);
-}
-
-.detail-item .detail-label{
-  font-size:.7rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:.8rem;
-}
-
-.detail-item .detail-value{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;
-  color:var(--ink);
-  line-height:1.4;
-}
-
-/* CTA BUTTON */
-
-.cta{
-  display:inline-block;
-  margin-top:2rem;
-  padding:1.1rem 2.4rem;
-  background:var(--ink);
-  color:#f3f0ea;
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-  position:relative;
-  padding:6rem 0;
-  overflow:hidden;
-}
-
-/* SOFT INSTITUTIONAL BACKGROUND */
-footer::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(28,36,44,.92), rgba(28,36,44,.96)),
-    url('Assets/Individual\ Therapy.jpg');
-  background-size:cover;
-  background-position:center;
-  filter:grayscale(60%) contrast(.85);
-}
-
-.footer-inner{
-  position:relative;
-  width:min(1180px,92%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:4rem;
-  color:#e7ded4;
-}
-
-.footer-title{
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  margin-bottom:1.2rem;
-  color:#cbb7a6;
-}
-
-.footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:.7rem;
-  font-size:.9rem;
-}
-
-.footer-bottom{
-  position:relative;
-  width:min(1180px,92%);
-  margin:4rem auto 0;
-  padding-top:2rem;
-  border-top:1px solid rgba(231,222,212,.15);
-  display:flex;
-  justify-content:space-between;
-  font-size:.72rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#9a8d80;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:980px){
-
-  .split,.grid,.footer-inner{
-    grid-template-columns:1fr;
-  }
-
-  .spec-list{columns:2;}
-
-  .details-strip{
-    grid-template-columns:repeat(2,1fr);
-    gap:2rem;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .mobile-nav-preview{
-    display:block;
-  }
-
-  h1{font-size:3.5rem;}
-  h2{font-size:2.8rem;}
-
-  .footer-bottom{
-    flex-direction:column;
-    gap:1rem;
-  }
-
-}
-
-@media(max-width:600px){
-  .spec-list{columns:1;}
-  .details-strip{grid-template-columns:1fr;}
-}
-
-</style>
+</script>
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
-    <div class="logo">PIVOTAL TIDES</div>
-
+    <a href="index.html" class="logo">PIVOTAL TIDES</a>
     <div class="nav-links">
-      <span>About</span>
-      <span>Services</span>
-      <span>Approach</span>
-      <span>Rates</span>
-      <span>Contact</span>
+      <a href="index.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="approach.html">Approach</a>
+      <a href="rates.html">Rates &amp; FAQ</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <button class="hamburger-btn" id="hamburger" aria-label="Menu" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-
-  <!-- MOBILE NAV MOCK -->
-  <div class="mobile-nav-preview">
-    About · Services · Approach · Rates · Contact
-  </div>
+  <nav class="mobile-nav-menu" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="approach.html">Approach</a>
+    <a href="rates.html">Rates &amp; FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-
-  <div class="hero-bg"></div>
-
+<section class="hero hero-full">
+  <div class="hero-bg" style="background-image:url('https://losmanzanos.github.io/angelique/Assets/Hero.png');"></div>
   <div class="hero-inner">
-
     <div class="eyebrow">Marriage &amp; Family Therapy · Murrieta, California</div>
-
     <h1>Pivotal Tides</h1>
-
-    <p class="hero-lede">
-      When life no longer feels like it fits — I&rsquo;ll help you find your way.
-    </p>
-
-    <p>
-      A private psychotherapy practice offering depth-oriented, insight-focused care
-      for individuals and couples navigating life&rsquo;s most pivotal moments.
-    </p>
-
+    <p class="hero-lede">When life no longer feels like it fits — I&rsquo;ll help you find your way.</p>
+    <p>A private psychotherapy practice offering depth-oriented, insight-focused care for individuals and couples navigating life&rsquo;s most pivotal moments.</p>
     <div class="hero-meta">
       <span>In-Person &amp; Virtual</span>
       <span>Free 15-Minute Consultation</span>
     </div>
-
   </div>
-
 </section>
 
 <!-- APPROACH -->
 <section class="section">
-
   <div class="container split">
-
     <div>
-
       <div class="eyebrow">Approach</div>
-
       <h2>A space to slow down and reconnect</h2>
-
-      <p>
-        Therapy here is depth-oriented and insight-focused — drawing on Cognitive
-        Behavioral Therapy, Client-Centered, and Mindfulness-Based approaches to meet
-        you where you are. Together, we slow things down, untangle what feels
-        overwhelming, and create space for clarity and emotional steadiness.
-      </p>
-
-      <p style="margin-top:1.2rem;">
-        Whether you&rsquo;re working through relationship challenges, redefining your
-        sense of self, or trying to reconnect with your partner, the work moves at a
-        pace that feels right — without the pressure of having everything figured out
-        before you begin.
-      </p>
-
+      <p>Therapy here is depth-oriented and insight-focused — drawing on Cognitive Behavioral Therapy, Client-Centered, and Mindfulness-Based approaches to meet you where you are. Together, we slow things down, untangle what feels overwhelming, and create space for clarity and emotional steadiness.</p>
+      <p style="margin-top:1.2rem;">Whether you&rsquo;re working through relationship challenges, redefining your sense of self, or trying to reconnect with your partner, the work moves at a pace that feels right — without the pressure of having everything figured out before you begin.</p>
     </div>
-
     <div class="image">
-
-      <img src="Assets/Services.jpg" alt="">
-
+      <img src="https://losmanzanos.github.io/angelique/Assets/Services.jpg" alt="Misty hills and valley - representing the therapeutic approach of slowing down and reconnecting">
     </div>
-
   </div>
-
 </section>
 
 <!-- SERVICES -->
-<section class="section services">
-
+<section class="section services" style="background:var(--bg-alt);">
   <div class="container">
-
     <div class="eyebrow">Services</div>
-
     <h2>Ways we can work together</h2>
-
     <div class="grid">
-
       <div class="card">
         <h3>Individual Therapy</h3>
-        <p>
-          A space created just for you — where your story is heard, your experiences
-          are honored, and your growth is supported with intention and care. For those
-          navigating impactful life transitions, loss of identity, relationship
-          challenges, or simply feeling stuck.
-        </p>
+        <p>A space created just for you — where your story is heard, your experiences are honored, and your growth is supported with intention and care. For those navigating impactful life transitions, loss of identity, relationship challenges, or simply feeling stuck.</p>
       </div>
-
       <div class="card">
         <h3>Couples Therapy</h3>
-        <p>
-          We explore the patterns, emotions, and experiences shaping your relationship
-          while building practical tools to move forward with clarity and confidence
-          as a connected unit. The aim isn&rsquo;t to &ldquo;fix&rdquo; anyone — it&rsquo;s to understand each
-          other and create lasting change at a pace that feels right.
-        </p>
+        <p>We explore the patterns, emotions, and experiences shaping your relationship while building practical tools to move forward with clarity and confidence as a connected unit. The aim isn&rsquo;t to &ldquo;fix&rdquo; anyone — it&rsquo;s to understand each other and create lasting change at a pace that feels right.</p>
       </div>
-
       <div class="card">
         <h3>Group Therapy</h3>
-        <p>
-          A reminder that you don&rsquo;t have to navigate life&rsquo;s challenges alone. In a
-          supportive, thoughtfully guided space, you&rsquo;ll connect with others who share
-          similar experiences — fostering understanding, validation, and community
-          that can be difficult to find elsewhere.
-        </p>
+        <p>A reminder that you don&rsquo;t have to navigate life&rsquo;s challenges alone. In a supportive, thoughtfully guided space, you&rsquo;ll connect with others who share similar experiences — fostering understanding, validation, and community that can be difficult to find elsewhere.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <!-- SPECIALTIES -->
 <section class="section specialties">
-
   <div class="container">
-
     <div class="eyebrow">Specialties</div>
-
     <h2>Areas of focus</h2>
 
-    <div class="spec-eyebrow" style="margin-top:2.5rem;">Top Specialties</div>
+    <div class="spec-eyebrow">Top Specialties</div>
     <div class="spec-top">
       <span>Women&rsquo;s Issues</span>
       <span>Life Transitions</span>
@@ -623,36 +186,17 @@ footer::before{
       <span>Identity &amp; Purpose</span>
       <span>Anxiety &amp; Depression</span>
     </div>
-
   </div>
-
 </section>
 
 <!-- CLINICIAN -->
-<section class="section">
-
+<section class="section" style="background:var(--bg-alt);">
   <div class="container split">
-
     <div>
-
       <div class="eyebrow">Clinician</div>
-
       <h2>Angelique Danza, M.S., LMFT</h2>
-
-      <p>
-        Licensed Marriage and Family Therapist based in Murrieta, California, with over
-        a decade of experience supporting children, adolescents, adults, couples, and
-        groups. Drawn to understanding people — their stories, their struggles, and
-        the ways they find strength even in the most difficult seasons of life.
-      </p>
-
-      <p style="margin-top:1.4rem;">
-        Clinical experience spans grief and loss, anger management, relational
-        conflict, life transitions, identity loss, anxiety and depression, foster
-        home dynamics, women&rsquo;s mental health, and reentry work with PC 290
-        registrants focused on reducing recidivism and supporting public safety.
-      </p>
-
+      <p>Licensed Marriage and Family Therapist based in Murrieta, California, with over a decade of experience supporting children, adolescents, adults, couples, and groups. Drawn to understanding people — their stories, their struggles, and the ways they find strength even in the most difficult seasons of life.</p>
+      <p style="margin-top:1.4rem;">Clinical experience spans grief and loss, anger management, relational conflict, life transitions, identity loss, anxiety and depression, foster home dynamics, women&rsquo;s mental health, and reentry work with PC 290 registrants focused on reducing recidivism and supporting public safety.</p>
       <p style="margin-top:1.6rem;font-size:.92rem;color:var(--muted);">
         <strong style="color:var(--ink);font-weight:500;">Licenses &amp; Certifications</strong><br>
         CA LMFT112463 · Board of Behavioral Sciences<br>
@@ -662,142 +206,93 @@ footer::before{
         <strong style="color:var(--ink);font-weight:500;">Affiliations</strong><br>
         CAMFT · ASRH
       </p>
-
     </div>
-
-    <div class="headshot">
-
-      <img src="Assets/Angelique.png" alt="Angelique Danza, LMFT" style="width: 85%; height: auto;">
-
+    <div class="headshot-wrap">
+      <img class="headshot" src="https://losmanzanos.github.io/angelique/Assets/Angelique.png" alt="Angelique Danza, M.S., Licensed Marriage and Family Therapist at Pivotal Tides">
     </div>
-
   </div>
-
 </section>
 
 <!-- BALDWIN QUOTE -->
 <section class="quote-section">
-
   <div class="container">
-
-    <blockquote>
-      &ldquo;Nothing is more desirable than to be released from an affliction,
-      but nothing is more frightening than to be divested of a crutch.&rdquo;
-    </blockquote>
-
+    <blockquote>&ldquo;Nothing is more desirable than to be released from an affliction, but nothing is more frightening than to be divested of a crutch.&rdquo;</blockquote>
     <cite>— James Baldwin</cite>
-
   </div>
-
 </section>
 
 <!-- CONTACT -->
 <section class="section">
-
   <div class="container split">
-
     <div class="image">
-
-      <img src="Assets/Contact.jpg">
-
+      <img src="https://losmanzanos.github.io/angelique/Assets/Contact.jpg" alt="Open doorway overlooking peaceful ocean and coastal landscape - beginning therapy journey">
     </div>
-
     <div>
-
       <div class="eyebrow">Begin When You&rsquo;re Ready</div>
-
       <h2>The first step is reaching out</h2>
-
-      <p>
-        Therapy doesn&rsquo;t mean having everything figured out — it just means being
-        willing to begin. A free 15-minute consultation is offered to determine fit
-        and answer any questions before starting.
-      </p>
+      <p>Therapy doesn&rsquo;t mean having everything figured out — it just means being willing to begin. A free 15-minute consultation is offered to determine fit and answer any questions before starting.</p>
 
       <div class="details-strip">
-
         <div class="detail-item">
           <div class="detail-label">Individual</div>
           <div class="detail-value">$175 / session</div>
         </div>
-
         <div class="detail-item">
           <div class="detail-label">Couples</div>
           <div class="detail-value">$190 / session</div>
         </div>
-
         <div class="detail-item">
           <div class="detail-label">Format</div>
           <div class="detail-value">In-person &amp; virtual</div>
         </div>
-
         <div class="detail-item">
           <div class="detail-label">Insurance</div>
           <div class="detail-value">Accepted</div>
         </div>
-
       </div>
 
       <p style="margin-top:2.4rem;font-size:.92rem;color:var(--muted);">
-        Aetna · Blue Shield · BlueCross BlueShield · Carelon · Cigna / Evernorth ·
-        Quest Behavioral Health · Out of Network
+        Aetna · Blue Shield · BlueCross BlueShield · Carelon · Cigna / Evernorth · Quest Behavioral Health · Out of Network
       </p>
 
       <a href="tel:+19514761143" class="cta">Schedule a Consultation</a>
-
     </div>
-
   </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer>
-
   <div class="footer-inner">
-
     <div>
       <div class="footer-title">Pivotal Tides</div>
-      <p style="color:#d7cbbf;line-height:1.8;">
-        Marriage and family therapy in Murrieta, California — offering depth-oriented,
-        insight-focused care for individuals and couples navigating life&rsquo;s pivotal
-        moments.
-      </p>
-      <p style="color:#d7cbbf;line-height:1.8;margin-top:1.2rem;">
-        <strong style="color:#f3e7d8;">(951) 476-1143</strong><br>
-        Murrieta, CA 92563
-      </p>
+      <p>Marriage and family therapy in Murrieta, California — offering depth-oriented, insight-focused care for individuals and couples navigating life&rsquo;s pivotal moments.</p>
+      <p style="margin-top:1.2rem;"><strong style="color:#f3e7d8;">(951) 476-1143</strong><br>Murrieta, CA 92563</p>
     </div>
-
     <div>
       <div class="footer-title">Pages</div>
       <div class="footer-links">
-        <span>Home</span>
-        <span>Services</span>
-        <span>Meet Angelique</span>
-        <span>Rates</span>
-        <span>Contact</span>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="rates.html">Rates &amp; FAQ</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-
     <div>
       <div class="footer-title">Practice</div>
       <div class="footer-links">
-        <span>Fees &amp; Insurance</span>
-        <span>Good Faith Estimate</span>
-        <span>Privacy Policy</span>
-        <span>Support Group Inquiry</span>
+        <a href="rates.html">Fees &amp; Insurance</a>
+        <a href="support-groups.html">Support Groups</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
       </div>
     </div>
-
   </div>
-
-  <div class="footer-bottom">
+  <div class="container footer-bottom">
     <span>© 2026 Pivotal Tides · All Rights Reserved</span>
     <span>CA LMFT112463</span>
   </div>
-
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>
