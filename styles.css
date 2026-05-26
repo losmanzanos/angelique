@@ -6,12 +6,12 @@
 /* ---------- Tokens ---------- */
 :root{
   --bg:#f3f0ea;
-  --bg-alt:#faf8f5;
+  --bg-alt:#ece4d3;       /* deeper sandy cream — pairs with --bg instead of jumping to white */
   --ink:#1f2a33;
   --text:#4e5964;
   --muted:#7b848e;
   --accent:#b39b88;
-  --line:#e6ded4;
+  --line:#e0d6c5;
   --header-h:86px;
   --radius:0;
 }
@@ -53,15 +53,35 @@ header{
   display:flex;justify-content:space-between;align-items:center;
 }
 .logo{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-start;
+  text-decoration:none;
+  color:var(--ink);
+  line-height:1;
+  transition:color .3s;
+}
+.logo:hover{color:var(--accent);}
+.logo-mark{
   font-family:'Cormorant Garamond',serif;
   font-size:1.7rem;
   letter-spacing:.08em;
-  text-decoration:none;
   color:var(--ink);
+  white-space:nowrap;
   transition:color .3s;
+}
+.logo:hover .logo-mark{color:var(--accent);}
+.logo-tag{
+  display:block;
+  margin-top:.32rem;
+  font-family:'Inter',sans-serif;
+  font-size:.6rem;
+  font-weight:500;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
   white-space:nowrap;
 }
-.logo:hover{color:var(--accent);}
 .nav-links{
   display:flex;gap:2.5rem;
   font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#4b5563;
@@ -129,12 +149,13 @@ header{
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  filter:grayscale(30%) saturate(.6) contrast(.9) brightness(.97);
+  filter:brightness(1.02);   /* let the new photos read warm and bright */
   z-index:0;
 }
 .hero-bg::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(243,240,234,.96) 0%,rgba(243,240,234,.86) 40%,rgba(243,240,234,.35) 80%,rgba(243,240,234,.15) 100%);
+  /* softer overlay — keeps text legible on the left without dulling the photo on the right */
+  background:linear-gradient(90deg,rgba(243,240,234,.88) 0%,rgba(243,240,234,.7) 40%,rgba(243,240,234,.2) 75%,rgba(243,240,234,0) 100%);
 }
 .hero-inner{
   position:relative;z-index:1;
@@ -181,7 +202,7 @@ header{
 .image img{
   width:100%;height:100%;
   object-fit:cover;
-  filter:grayscale(25%) saturate(.65) contrast(.92);
+  filter:none;
 }
 
 /* ---------- Cards / grid ---------- */
@@ -310,7 +331,7 @@ header{
   aspect-ratio:4/5;
   border-radius:0;
   object-fit:cover;
-  filter:grayscale(10%) saturate(.85) contrast(.95);
+  filter:none;
   box-shadow:0 14px 40px rgba(31,42,51,.10);
 }
 
@@ -460,9 +481,8 @@ header{
 footer{position:relative;padding:6rem 0 0;overflow:hidden;}
 footer::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(rgba(28,36,44,.92),rgba(28,36,44,.96)),url('Assets/Individual.jpg');
+  background:linear-gradient(rgba(28,36,44,.92),rgba(28,36,44,.96)),url('Assets/Coastal Pathway.jpg');
   background-size:cover;background-position:center;
-  filter:grayscale(60%) contrast(.85);
 }
 .footer-inner{
   position:relative;
@@ -505,13 +525,14 @@ footer::before{
   .headshot{max-width:320px;}
   .pricing-grid{grid-template-columns:1fr;gap:2rem;}
   .hero-bg::after{
-    background:linear-gradient(180deg,rgba(243,240,234,.92) 0%,rgba(243,240,234,.78) 60%,rgba(243,240,234,.55) 100%);
+    background:linear-gradient(180deg,rgba(243,240,234,.88) 0%,rgba(243,240,234,.68) 60%,rgba(243,240,234,.4) 100%);
   }
 }
 
 @media(max-width:600px){
-  :root{--header-h:72px;}
-  .logo{font-size:1.4rem;letter-spacing:.06em;}
+  :root{--header-h:76px;}
+  .logo-mark{font-size:1.3rem;letter-spacing:.06em;}
+  .logo-tag{font-size:.52rem;letter-spacing:.2em;margin-top:.25rem;}
   .hero{min-height:auto;padding:3.5rem 0;}
   .hero-meta{gap:1.2rem;font-size:.62rem;margin-top:1.8rem;}
   .spec-list{grid-template-columns:1fr;}
