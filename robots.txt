@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /Assets/
 Disallow: /private/
 
 Sitemap: https://pivotaltides.com/sitemap.xml

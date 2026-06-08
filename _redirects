@@ -1,14 +1,17 @@
 # Cloudflare Pages / Redirects
 # Handles old GoDaddy URL slugs → new .html paths
 
-/services          /services.html          301
-/approach          /approach.html          301
-/rates             /rates.html             301
-/contact           /contact.html           301
-/support-groups    /support-groups.html    301
-/privacy-policy    /privacy-policy.html    301
-/meet-angelique    /index.html             301
-/support-group-inquiry  /support-groups.html  301
+/services                /services.html          301
+/approach                /approach.html          301
+/rates                   /rates.html             301
+/contact                 /contact.html           301
+/support-groups          /support-groups.html    301
+/privacy-policy          /privacy-policy.html    301
+/meet-angelique          /index.html             301
+/support-group-inquiry   /support-groups.html    301
+/reproductive-support    /services.html          301
+/intended-parent         /services.html          301
+/surrogate-assessment    /services.html          301
 
 # www → non-www (Cloudflare handles this at DNS level, but belt-and-suspenders)
 https://www.pivotaltides.com/*  https://pivotaltides.com/:splat  301
