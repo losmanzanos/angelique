@@ -88,8 +88,11 @@ header{
 }
 .logo:hover .logo-img{opacity:.75;}
 .footer-logo-img{
-  height:90px;width:auto;display:block;
-  margin-bottom:1.2rem;opacity:.9;
+  height:140px;width:140px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  margin-bottom:1.5rem;
 }
 .nav-links{
   display:flex;gap:2.5rem;
@@ -154,7 +157,8 @@ header{
   min-height:calc(100svh - var(--header-h));
 }
 .hero-bg{
-  position:absolute;inset:0;
+  position:absolute;
+  top:-2px;left:0;right:0;bottom:0;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -583,7 +587,7 @@ footer::before{
   .logo-mark{font-size:1.3rem;letter-spacing:.06em;}
   .logo-tag{font-size:.52rem;letter-spacing:.2em;margin-top:.25rem;}
   .logo-img{height:44px;}
-  .footer-logo-img{height:70px;}
+  .footer-logo-img{height:110px;width:110px;}
   .hero{min-height:auto;padding:3.5rem 0;}
   .hero-meta{gap:1.2rem;font-size:.62rem;margin-top:1.8rem;color:var(--ink);font-weight:600;}
   .spec-list{grid-template-columns:1fr;}
