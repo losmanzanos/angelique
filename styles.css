@@ -558,6 +558,32 @@ footer::before{
   font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#9a8d80;
 }
 
+
+/* Baldwin quote — mobile/tablet only (approach.html) */
+.mobile-quote-section { display: none; }
+.mobile-baldwin-quote {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.05rem,2vw,1.35rem);
+  font-style:italic;
+  line-height:1.55;
+  color:var(--ink);
+}
+.mobile-baldwin-cite {
+  display:block;margin-top:.9rem;
+  font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);font-style:normal;
+}
+
+/* Hero meta badges — pill treatment for legibility */
+.hero-meta span {
+  display:inline-block;
+  background:rgba(247,244,238,.82);
+  padding:.35rem .85rem;
+  color:var(--ink);
+  font-weight:600;
+  letter-spacing:.2em;
+}
+
 /* ================================================================
    RESPONSIVE
    ================================================================ */
@@ -576,9 +602,17 @@ footer::before{
   .headshot{max-width:320px;}
   .clinician-split{flex-direction:column;}
   .clinician-photo{width:100%;order:-1;align-items:center;}
+  .clinician-quote,.clinician-cite{display:none;}
+  .mobile-quote-section{display:block;}
   .pricing-grid{grid-template-columns:1fr;gap:2rem;}
   .hero-bg::after{
-    background:linear-gradient(180deg,rgba(247,244,238,.82) 0%,rgba(247,244,238,.60) 60%,rgba(247,244,238,.28) 100%);
+    background:linear-gradient(180deg,rgba(247,244,238,.55) 0%,rgba(247,244,238,.70) 55%,rgba(247,244,238,.25) 100%);
+  }
+  .hero-full.hero{
+    min-height:70vh;
+    min-height:70svh;
+    align-items:flex-start;
+    padding-top:4rem;
   }
 }
 
