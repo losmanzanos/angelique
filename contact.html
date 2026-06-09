@@ -23,7 +23,7 @@
 <script type="text/javascript">
   (function () {
     if (window.emailjs && typeof emailjs.init === 'function') {
-      emailjs.init("YOUR_PUBLIC_KEY");
+      emailjs.init("vti42VGqAl_2s-i4l");
     }
   })();
 </script>
@@ -193,14 +193,18 @@
         alert('Form is not yet configured. Please call (951) 395-6089 instead.');
         return;
       }
+      const nameVal  = document.getElementById('name').value;
+      const emailVal = document.getElementById('email').value;
       const formData = {
-        from_name: document.getElementById('name').value,
-        from_email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value,
-        to_email: 'AngeliqueDanza.lmft@gmail.com'
+        name:      nameVal,
+        email:     emailVal,
+        from_name: nameVal,
+        from_email: emailVal,
+        phone:     document.getElementById('phone').value,
+        message:   document.getElementById('message').value,
+        title:     'New Contact Form Submission'
       };
-      emailjs.send('SERVICE_ID', 'TEMPLATE_ID', formData).then(
+      emailjs.send('service_b3r8yg7', 'template_6hfdcjd', formData).then(
         function () {
           alert("Message sent successfully! I'll be in touch soon.");
           contactForm.reset();
