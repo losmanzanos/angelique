@@ -19,10 +19,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
-<script type="text/javascript">
-  emailjs.init("vti42VGqAl_2s-i4l");
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -185,31 +181,45 @@
     if (!contactForm) return;
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!window.emailjs || typeof emailjs.send !== 'function') {
-        alert('Form is not yet configured. Please call (951) 395-6089 instead.');
-        return;
-      }
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
       const nameVal  = document.getElementById('name').value;
       const emailVal = document.getElementById('email').value;
-      const formData = {
-        name:      nameVal,
-        email:     emailVal,
-        from_name: nameVal,
-        from_email: emailVal,
-        phone:     document.getElementById('phone').value,
-        message:   document.getElementById('message').value,
-        title:     'New Contact Form Submission'
-      };
-      emailjs.send('service_b3r8yg7', 'template_6hfdcjd', formData).then(
-        function () {
+      fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id:  'service_b3r8yg7',
+          template_id: 'template_6hfdcjd',
+          user_id:     'vti42VGqAl_2s-i4l',
+          template_params: {
+            name:       nameVal,
+            email:      emailVal,
+            from_name:  nameVal,
+            from_email: emailVal,
+            phone:      document.getElementById('phone').value,
+            message:    document.getElementById('message').value,
+            title:      'New Contact Form Submission'
+          }
+        })
+      })
+      .then(function(res) {
+        if (res.ok) {
           alert("Message sent successfully! I'll be in touch soon.");
           contactForm.reset();
-        },
-        function (error) {
-          alert('Failed to send message. Please call instead: (951) 395-6089');
-          console.error('EmailJS error:', error);
+        } else {
+          return res.text().then(function(t) { throw new Error(t); });
         }
-      );
+      })
+      .catch(function(err) {
+        alert('Failed to send message. Please call instead: (951) 395-6089');
+        console.error('EmailJS error:', err);
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
     });
   })();
 </script>
