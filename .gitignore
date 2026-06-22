@@ -26,10 +26,7 @@ dist/
 build/
 .cache/
 _site/
-
-# Eleventy / TinaCMS generated
-admin/
-tina/__generated__/
+node_modules/
 
 # Sensitive files
 *.key
