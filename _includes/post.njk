@@ -4,7 +4,7 @@ pageType: article
 ---
 <article class="blog-post content">
   <div class="container blog-post-container">
-    <a href="/blog/" class="blog-back">&larr; Back to the Journal</a>
+    <a href="{{ basePath }}/blog/" class="blog-back">&larr; Back to the Journal</a>
     <div class="eyebrow">Journal</div>
     <h1 class="blog-post-title">{{ title }}</h1>
     <div class="blog-post-meta">
@@ -29,12 +29,12 @@ pageType: article
 
     {% if tags and tags.length %}
     <div class="blog-tags">
-      {% for t in tags %}<a class="blog-tag" href="/blog/tag/{{ t | slugify }}/">{{ t }}</a>{% endfor %}
+      {% for t in tags %}<a class="blog-tag" href="{{ basePath }}/blog/tag/{{ t | slugify }}/">{{ t }}</a>{% endfor %}
     </div>
     {% endif %}
 
     <div class="blog-post-foot">
-      <a href="/blog/" class="blog-back">&larr; Back to the Journal</a>
+      <a href="{{ basePath }}/blog/" class="blog-back">&larr; Back to the Journal</a>
     </div>
   </div>
 </article>
@@ -46,7 +46,7 @@ pageType: article
     <div class="eyebrow" style="text-align:center;">More from the Journal</div>
     <div class="blog-grid blog-related-grid">
       {% for post in related %}
-      <a class="blog-card" href="{{ post.url }}">
+      <a class="blog-card" href="{{ basePath }}{{ post.url }}">
         <div class="blog-card-img">
           <img src="{{ (post.data.image | assetUrl) or site.defaultImage }}" alt="{{ post.data.title }}" loading="lazy">
         </div>

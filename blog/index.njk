@@ -29,7 +29,7 @@ permalink: /blog/
 
     <div class="blog-grid" id="blogGrid">
       {% for post in collections.posts %}
-      <a class="blog-card" href="{{ post.url }}" data-tags="{% for t in post.data.tags %}{{ t | slugify }} {% endfor %}">
+      <a class="blog-card" href="{{ basePath }}{{ post.url }}" data-tags="{% for t in post.data.tags %}{{ t | slugify }} {% endfor %}">
         <div class="blog-card-img">
           <img src="{{ (post.data.image | assetUrl) or site.defaultImage }}" alt="{{ post.data.title }}" loading="lazy">
         </div>
