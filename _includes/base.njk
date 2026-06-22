@@ -28,11 +28,11 @@
 <meta name="twitter:description" content="{{ metaDesc }}">
 <meta name="twitter:image" content="{{ absImage }}">
 
-<link rel="icon" href="/Assets/Circular Logo.png" type="image/png">
+<link rel="icon" href="{{ '/Assets/Circular Logo.png' | url }}" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="{{ '/styles.css' | url }}">
 
 {% if pageType == "article" %}
 <script type="application/ld+json">
@@ -71,29 +71,29 @@
 
 <header>
   <div class="container nav">
-    <a href="/index.html" class="logo">
+    <a href="{{ '/index.html' | url }}" class="logo">
       <span class="logo-mark">PIVOTAL TIDES</span>
       <span class="logo-tag">Therapy for Growth &amp; Healing</span>
     </a>
     <div class="nav-links">
-      <a href="/index.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/approach.html">Approach</a>
-      <a href="/rates.html">Rates &amp; FAQ</a>
-      <a href="/blog/">Journal</a>
-      <a href="/contact.html">Contact</a>
+      <a href="{{ '/index.html' | url }}">About</a>
+      <a href="{{ '/services.html' | url }}">Services</a>
+      <a href="{{ '/approach.html' | url }}">Approach</a>
+      <a href="{{ '/rates.html' | url }}">Rates &amp; FAQ</a>
+      <a href="{{ '/blog/' | url }}">Journal</a>
+      <a href="{{ '/contact.html' | url }}">Contact</a>
     </div>
     <button class="hamburger-btn" id="hamburger" aria-label="Menu" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="mobile-nav-menu" id="mobileNav" aria-label="Mobile">
-    <a href="/index.html">About</a>
-    <a href="/services.html">Services</a>
-    <a href="/approach.html">Approach</a>
-    <a href="/rates.html">Rates &amp; FAQ</a>
-    <a href="/blog/">Journal</a>
-    <a href="/contact.html">Contact</a>
+    <a href="{{ '/index.html' | url }}">About</a>
+    <a href="{{ '/services.html' | url }}">Services</a>
+    <a href="{{ '/approach.html' | url }}">Approach</a>
+    <a href="{{ '/rates.html' | url }}">Rates &amp; FAQ</a>
+    <a href="{{ '/blog/' | url }}">Journal</a>
+    <a href="{{ '/contact.html' | url }}">Contact</a>
   </nav>
 </header>
 
@@ -103,7 +103,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="/Assets/Circular Logo.png" alt="Pivotal Tides" class="footer-logo-img">
+      <img src="{{ '/Assets/Circular Logo.png' | url }}" alt="Pivotal Tides" class="footer-logo-img">
       <div class="footer-title">Pivotal Tides · Therapy for Growth &amp; Healing</div>
       <p>Marriage and family therapy serving the Inland Empire &mdash; Murrieta, Temecula, and surrounding areas. Depth-oriented, insight-focused care for individuals and couples navigating life&rsquo;s pivotal moments.</p>
       <p style="margin-top:1.2rem;"><strong style="color:#f3e7d8;">(951) 395-6089</strong></p>
@@ -111,20 +111,20 @@
     <div>
       <div class="footer-title">Pages</div>
       <div class="footer-links">
-        <a href="/index.html">Home</a>
-        <a href="/services.html">Services</a>
-        <a href="/approach.html">Approach</a>
-        <a href="/rates.html">Rates &amp; FAQ</a>
-        <a href="/blog/">Journal</a>
-        <a href="/contact.html">Contact</a>
+        <a href="{{ '/index.html' | url }}">Home</a>
+        <a href="{{ '/services.html' | url }}">Services</a>
+        <a href="{{ '/approach.html' | url }}">Approach</a>
+        <a href="{{ '/rates.html' | url }}">Rates &amp; FAQ</a>
+        <a href="{{ '/blog/' | url }}">Journal</a>
+        <a href="{{ '/contact.html' | url }}">Contact</a>
       </div>
     </div>
     <div>
       <div class="footer-title">Practice</div>
       <div class="footer-links">
-        <a href="/rates.html">Fees &amp; Insurance</a>
-        <a href="/support-groups.html">Support Groups</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="{{ '/rates.html' | url }}">Fees &amp; Insurance</a>
+        <a href="{{ '/support-groups.html' | url }}">Support Groups</a>
+        <a href="{{ '/privacy-policy.html' | url }}">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -134,6 +134,6 @@
   </div>
 </footer>
 
-<script src="/script.js" defer></script>
+<script src="{{ '/script.js' | url }}" defer></script>
 </body>
 </html>

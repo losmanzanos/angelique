@@ -5,7 +5,14 @@
    (index.html, services.html, etc.), the stylesheet, the script,
    and the Assets folder are copied to the output UNCHANGED.
    Eleventy ONLY generates the new /blog section from markdown.
+
+   PATH PREFIX:
+   Set ELEVENTY_PATH_PREFIX env var for subpath deployments.
+   e.g. ELEVENTY_PATH_PREFIX=/angelique for GitHub Pages demo.
+   Leave unset (defaults to "/") for production on pivotaltides.com.
    ================================================================ */
+
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
 
 module.exports = function (eleventyConfig) {
   /* ---- Copy the existing static site through untouched ---- */
@@ -75,6 +82,7 @@ module.exports = function (eleventyConfig) {
   );
 
   return {
+    pathPrefix,
     dir: { input: ".", includes: "_includes", data: "_data", output: "_site" },
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: "njk",

@@ -30,9 +30,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with Eleventy (no TinaCMS)
-        # Uses build:site script which skips tinacms build — no Tina credentials needed
+      - name: Build with Eleventy (no TinaCMS — skips Tina Cloud auth requirement)
         run: npm run build:site
+        env:
+          ELEVENTY_PATH_PREFIX: /angelique
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
