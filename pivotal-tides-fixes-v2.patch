@@ -1,0 +1,367 @@
+From bb78be696105c1afb8bf539675911772c0cbed32 Mon Sep 17 00:00:00 2001
+From: Chad Moravec <chad.m.moravec@gmail.com>
+Date: Sun, 21 Jun 2026 02:09:13 +0000
+Subject: [PATCH] Remove Behavioral Health insurance listing; correct business
+ address to Temecula per GBP; add alternateName/sameAs/geo schema and
+ propagate LocalBusiness entity across all pages
+
+---
+ approach.html         | 23 +++++++++++++++++++++++
+ contact.html          | 23 +++++++++++++++++++++++
+ emailjs-template.html |  2 +-
+ index.html            | 20 ++++++++++++++++----
+ llms.txt              |  6 +++---
+ privacy-policy.html   | 23 +++++++++++++++++++++++
+ rates.html            | 31 +++++++++++++++++++++++++++----
+ services.html         | 25 ++++++++++++++++++++++++-
+ support-groups.html   | 23 +++++++++++++++++++++++
+ 9 files changed, 163 insertions(+), 13 deletions(-)
+
+diff --git a/approach.html b/approach.html
+index 43bca6b..2d73cc2 100644
+--- a/approach.html
++++ b/approach.html
+@@ -38,6 +38,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+diff --git a/contact.html b/contact.html
+index f77ff8d..2dd9267 100644
+--- a/contact.html
++++ b/contact.html
+@@ -47,6 +47,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+diff --git a/emailjs-template.html b/emailjs-template.html
+index bb8b2f3..4057857 100644
+--- a/emailjs-template.html
++++ b/emailjs-template.html
+@@ -97,7 +97,7 @@
+           <tr>
+             <td style="padding:24px 40px;background-color:#f7f4ee;text-align:center;">
+               <p style="margin:0;font-size:11px;color:#9a8c7e;font-family:Arial,sans-serif;line-height:1.6;">
+-                Pivotal Tides &nbsp;·&nbsp; Murrieta, CA &nbsp;·&nbsp;
++                Pivotal Tides &nbsp;·&nbsp; Temecula, CA &nbsp;·&nbsp;
+                 <a href="https://pivotaltides.com" style="color:#8b7355;text-decoration:none;">pivotaltides.com</a>
+                 &nbsp;·&nbsp; (951) 395-6089
+               </p>
+diff --git a/index.html b/index.html
+index 10a5fa3..a8f4512 100644
+--- a/index.html
++++ b/index.html
+@@ -29,19 +29,31 @@
+ {
+   "@context": "https://schema.org",
+   "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
+   "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
+   "image": "https://pivotaltides.com/Assets/hero-home.jpg",
+   "description": "Pivotal Tides: Therapy for Growth & Healing — marriage and family therapy practice serving the Inland Empire",
+   "address": {
+     "@type": "PostalAddress",
+-    "addressLocality": "Murrieta",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
+     "addressRegion": "CA",
++    "postalCode": "92590",
+     "addressCountry": "US"
+   },
++  "geo": {
++    "@type": "GeoCoordinates",
++    "latitude": 33.4972102,
++    "longitude": -117.1605709
++  },
+   "telephone": "(951) 395-6089",
+   "priceRange": "$175-$190",
+   "areaServed": ["Murrieta, CA", "Temecula, CA", "Inland Empire, CA"],
+-  "sameAs": ["https://pivotaltides.com"],
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ],
+   "url": "https://pivotaltides.com"
+ }
+ </script>
+@@ -207,7 +219,7 @@
+     <div class="clinician-split">
+       <div class="clinician-bio">
+         <h2>Angelique Danza, M.S., LMFT</h2>
+-        <p>Thank you for being here! My name is Angelique Danza, Licensed Marriage and Family Therapist based out of Murrieta, California. I became a therapist because I've always been drawn to understanding people—their stories, their struggles, and the ways they find strength even in the most difficult seasons of life.</p>
++        <p>Thank you for being here! My name is Angelique Danza, Licensed Marriage and Family Therapist based out of Temecula, California. I became a therapist because I've always been drawn to understanding people—their stories, their struggles, and the ways they find strength even in the most difficult seasons of life.</p>
+         <p style="margin-top:1.4rem;">Over the years, both personally and professionally, I've come to deeply appreciate how complex and layered our experiences can be. Life doesn't follow a straight path, and neither does healing. One of the worst feelings is navigating life's struggles without a sense of connection, purpose, and support. My goal is to develop connections and provide support for my clients so navigating life's pivotal moments doesn't feel so isolated.</p>
+         <p style="margin-top:1.4rem;">With over 10 years of providing psychotherapy, I have had the privilege of working with children, adolescents, adults, couples, and in group settings. My experience includes working with clients struggling with grief &amp; loss, anger management, relational conflicts, life transitions, identity loss, anxiety and depression, foster home dynamics, women's mental health, and PC 290 registrants focused on reducing recidivism and supporting public safety.</p>
+         <p style="margin-top:1.6rem;font-size:.92rem;color:var(--text);">
+@@ -261,7 +273,7 @@
+       </div>
+ 
+       <p style="margin-top:2.4rem;font-size:.92rem;color:var(--text);">
+-        Aetna · Anthem Blue Cross · Carelon · Cigna / Evernorth · Behavioral Health · Out of Network
++        Aetna · Anthem Blue Cross · Carelon · Cigna / Evernorth · Out of Network
+       </p>
+ 
+       <a href="tel:+19513956089" class="cta">Schedule a Consultation</a>
+diff --git a/llms.txt b/llms.txt
+index 5faecc4..fab78ee 100644
+--- a/llms.txt
++++ b/llms.txt
+@@ -3,7 +3,7 @@
+ 
+ ## About
+ 
+-Pivotal Tides is a private psychotherapy practice owned and operated by Angelique Danza, M.S., LMFT (CA LMFT112463). The practice is based on the Murrieta–Temecula border in the Inland Empire of Southern California and offers depth-oriented, insight-focused therapy for individuals, couples, groups, and reproductive mental health support.
++Pivotal Tides is a private psychotherapy practice owned and operated by Angelique Danza, M.S., LMFT (CA LMFT112463). The practice is based in Temecula, CA, in the Inland Empire of Southern California, and offers depth-oriented, insight-focused therapy for individuals, couples, groups, and reproductive mental health support.
+ 
+ ## Clinician
+ 
+@@ -31,11 +31,11 @@ Women's issues, infertility, grief & loss, cancer psychotherapy, life transition
+ 
+ ## Insurance
+ 
+-Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, Behavioral Health, out-of-network benefits
++Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, out-of-network benefits
+ 
+ ## Location & Service Area
+ 
+-Murrieta, CA (Murrieta–Temecula border)
++Temecula, CA 92590
+ Serving: Murrieta, Temecula, and the broader Inland Empire
+ In-person and virtual sessions available
+ 
+diff --git a/privacy-policy.html b/privacy-policy.html
+index 9a6a6b6..650ae5d 100644
+--- a/privacy-policy.html
++++ b/privacy-policy.html
+@@ -24,6 +24,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+diff --git a/rates.html b/rates.html
+index aa284dc..0c1d6c8 100644
+--- a/rates.html
++++ b/rates.html
+@@ -35,7 +35,7 @@
+   "@type": "FAQPage",
+   "mainEntity": [
+     {"@type":"Question","name":"What do therapy sessions cost?","acceptedAnswer":{"@type":"Answer","text":"Individual therapy sessions are $175 per 50-minute session. Couples therapy is $200 per 50-minute session. Payment is due at the time of service."}},
+-    {"@type":"Question","name":"Do you accept insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes, I accept most major insurance carriers including Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, Behavioral Health, and out-of-network benefits."}},
++    {"@type":"Question","name":"Do you accept insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes, I accept most major insurance carriers including Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, and out-of-network benefits."}},
+     {"@type":"Question","name":"What is your cancellation policy?","acceptedAnswer":{"@type":"Answer","text":"I request 24 hours notice for cancellations. Cancellations with less than 24 hours notice will be charged in full."}},
+     {"@type":"Question","name":"Do you offer sliding scale or payment plans?","acceptedAnswer":{"@type":"Answer","text":"I am open to discussing payment arrangements for clients with financial constraints. Please call to discuss your situation."}},
+     {"@type":"Question","name":"Do you offer virtual (telehealth) sessions?","acceptedAnswer":{"@type":"Answer","text":"Yes, both in-person and virtual sessions are available. Virtual sessions are conducted securely via HIPAA-compliant video conferencing."}},
+@@ -45,7 +45,7 @@
+   ]
+ }
+ </script>
+-<title>Therapy Rates &amp; FAQ — Pivotal Tides · Murrieta, CA</title>
++<title>Therapy Rates &amp; FAQ — Pivotal Tides · Temecula, CA</title>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMJZ0STYKQ"></script>
+ <script>
+@@ -54,6 +54,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+@@ -111,7 +134,7 @@
+       </div>
+       <div>
+         <p style="font-size:.9rem;color:var(--muted);margin-bottom:1rem;">
+-          <strong style="color:var(--ink);font-weight:500;">Insurance:</strong> Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, Behavioral Health, and out-of-network benefits
++          <strong style="color:var(--ink);font-weight:500;">Insurance:</strong> Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, and out-of-network benefits
+         </p>
+         <p style="font-size:.9rem;color:var(--muted);">
+           <strong style="color:var(--ink);font-weight:500;">Consultation:</strong> Free 15-minute phone consultation to discuss your needs
+@@ -145,7 +168,7 @@
+           <div class="faq-toggle" aria-hidden="true">+</div>
+         </div>
+         <div class="faq-answer">
+-          <p>Yes, I accept most major insurance carriers including Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, Behavioral Health, and out-of-network benefits. I&rsquo;m happy to verify your coverage before your first session so there are no surprises.</p>
++          <p>Yes, I accept most major insurance carriers including Aetna, Anthem Blue Cross, Carelon, Cigna/Evernorth, and out-of-network benefits. I&rsquo;m happy to verify your coverage before your first session so there are no surprises.</p>
+         </div>
+       </div>
+ 
+diff --git a/services.html b/services.html
+index 37c3f93..6a2d53a 100644
+--- a/services.html
++++ b/services.html
+@@ -34,7 +34,7 @@
+   "@context": "https://schema.org",
+   "@type": "ItemList",
+   "name": "Therapy Services — Pivotal Tides",
+-  "description": "Mental health services offered by Angelique Danza, LMFT at Pivotal Tides in Murrieta, CA",
++  "description": "Mental health services offered by Angelique Danza, LMFT at Pivotal Tides in Temecula, CA",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+@@ -101,6 +101,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+diff --git a/support-groups.html b/support-groups.html
+index 746c03b..0dd58e7 100644
+--- a/support-groups.html
++++ b/support-groups.html
+@@ -39,6 +39,29 @@
+   gtag('js', new Date());
+   gtag('config', 'G-NMJZ0STYKQ');
+ </script>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "LocalBusiness",
++  "@id": "https://pivotaltides.com/#business",
++  "name": "Pivotal Tides",
++  "alternateName": ["Pivotal Tides: Therapy for Growth & Healing", "Pivotal Tides Therapy"],
++  "address": {
++    "@type": "PostalAddress",
++    "streetAddress": "43460 Ridge Park Dr, Suite 200A",
++    "addressLocality": "Temecula",
++    "addressRegion": "CA",
++    "postalCode": "92590",
++    "addressCountry": "US"
++  },
++  "telephone": "(951) 395-6089",
++  "url": "https://pivotaltides.com",
++  "sameAs": [
++    "https://pivotaltides.com",
++    "https://www.google.com/maps/place/?q=place_id:ChIJtwbLsPl_24ARd4TADZomSD0"
++  ]
++}
++</script>
+ </head>
+ <body>
+ 
+-- 
+2.43.0
+

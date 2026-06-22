@@ -1,0 +1,81 @@
+---
+layout: base.njk
+pageType: website
+title: Journal · Reflections on Growth & Healing
+seoTitle: Journal · Pivotal Tides — Therapy Insights & Reflections
+description: Reflections on growth, healing, relationships, and navigating life's pivotal moments — from Angelique Danza, LMFT, serving Murrieta, Temecula, and the Inland Empire.
+permalink: /blog/
+---
+<section class="blog-hero content">
+  <div class="container" style="max-width:780px;text-align:center;">
+    <div class="eyebrow">Journal</div>
+    <h1>Reflections on Growth &amp; Healing</h1>
+    <p class="blog-hero-lede">Thoughts on relationships, resilience, and the work of navigating life&rsquo;s pivotal moments.</p>
+  </div>
+</section>
+
+<section class="section blog-list-section">
+  <div class="container">
+    {% if collections.posts and collections.posts.length %}
+
+    {% if collections.postTags and collections.postTags.length %}
+    <div class="blog-filter" id="blogFilter">
+      <button type="button" class="blog-filter-chip active" data-tag="*">All</button>
+      {% for t in collections.postTags %}
+      <button type="button" class="blog-filter-chip" data-tag="{{ t | slugify }}">{{ t }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="blog-grid" id="blogGrid">
+      {% for post in collections.posts %}
+      <a class="blog-card" href="{{ post.url }}" data-tags="{% for t in post.data.tags %}{{ t | slugify }} {% endfor %}">
+        <div class="blog-card-img">
+          <img src="{{ (post.data.image | assetUrl) or site.defaultImage }}" alt="{{ post.data.title }}" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date">{{ post.date | readableDate }}</div>
+          <h3 class="blog-card-title">{{ post.data.title }}</h3>
+          {% if post.data.excerpt %}<p class="blog-card-excerpt">{{ post.data.excerpt }}</p>{% endif %}
+          {% if post.data.tags and post.data.tags.length %}
+          <div class="blog-card-tags">
+            {% for t in post.data.tags %}<span class="blog-card-tag">{{ t }}</span>{% endfor %}
+          </div>
+          {% endif %}
+          <span class="blog-card-more">Read More &rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <p class="blog-empty" id="blogEmpty" hidden>No posts in this topic yet.</p>
+
+    {% else %}
+    <p style="text-align:center;color:var(--muted);">New reflections are on the way — please check back soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+(function () {
+  var bar = document.getElementById('blogFilter');
+  if (!bar) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#blogGrid .blog-card'));
+  var empty = document.getElementById('blogEmpty');
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.blog-filter-chip');
+    if (!btn) return;
+    bar.querySelectorAll('.blog-filter-chip').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var tag = btn.getAttribute('data-tag');
+    var shown = 0;
+    cards.forEach(function (c) {
+      var tags = (c.getAttribute('data-tags') || '').trim().split(/\s+/);
+      var match = tag === '*' || tags.indexOf(tag) > -1;
+      c.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    if (empty) empty.hidden = shown !== 0;
+  });
+})();
+</script>

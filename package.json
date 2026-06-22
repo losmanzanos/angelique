@@ -1,0 +1,19 @@
+{
+  "name": "pivotal-tides",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pivotal Tides website + blog (Eleventy + TinaCMS)",
+  "scripts": {
+    "dev": "tinacms dev -c \"npx @11ty/eleventy --serve --quiet\"",
+    "build": "tinacms build && npx @11ty/eleventy",
+    "build:site": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.6.5",
+    "tinacms": "^2.6.0"
+  }
+}

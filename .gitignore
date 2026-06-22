@@ -25,6 +25,11 @@ Thumbs.db
 dist/
 build/
 .cache/
+_site/
+
+# Eleventy / TinaCMS generated
+admin/
+tina/__generated__/
 
 # Sensitive files
 *.key

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+{% set metaTitle = seoTitle or (title + " · Pivotal Tides") %}
+{% set metaDesc = metaDescription or description or excerpt or site.description %}
+{% set metaImage = (image | assetUrl) or site.defaultImage %}
+{% set absImage = metaImage if metaImage.startsWith("http") else (site.url + metaImage) %}
+{% set canonical = site.url + page.url %}
+
+<title>{{ metaTitle }}</title>
+<meta name="description" content="{{ metaDesc }}">
+<meta name="author" content="{{ author or site.author }}">
+{% if tags and tags.length %}<meta name="keywords" content="{{ tags | join(", ") }}">{% endif %}
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f3f0ea">
+<link rel="canonical" href="{{ canonical }}">
+
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:description" content="{{ metaDesc }}">
+<meta property="og:type" content="{{ "article" if pageType == "article" else "website" }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ absImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ metaTitle }}">
+<meta name="twitter:description" content="{{ metaDesc }}">
+<meta name="twitter:image" content="{{ absImage }}">
+
+<link rel="icon" href="/Assets/Circular Logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+{% if pageType == "article" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  "description": {{ metaDesc | dump | safe }},
+  "image": {{ absImage | dump | safe }},
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ date | isoDate }}",
+  "url": {{ canonical | dump | safe }},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical | dump | safe }} },
+  "author": { "@type": "Person", "name": {{ (author or site.author) | dump | safe }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pivotal Tides",
+    "logo": { "@type": "ImageObject", "url": "{{ site.url }}/Assets/Circular Logo.png" }
+  }{% if tags and tags.length %},
+  "keywords": {{ (tags | join(", ")) | dump | safe }}{% endif %}
+}
+</script>
+{% endif %}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMJZ0STYKQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NMJZ0STYKQ');
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="/index.html" class="logo">
+      <span class="logo-mark">PIVOTAL TIDES</span>
+      <span class="logo-tag">Therapy for Growth &amp; Healing</span>
+    </a>
+    <div class="nav-links">
+      <a href="/index.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/approach.html">Approach</a>
+      <a href="/rates.html">Rates &amp; FAQ</a>
+      <a href="/blog/">Journal</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <button class="hamburger-btn" id="hamburger" aria-label="Menu" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav-menu" id="mobileNav" aria-label="Mobile">
+    <a href="/index.html">About</a>
+    <a href="/services.html">Services</a>
+    <a href="/approach.html">Approach</a>
+    <a href="/rates.html">Rates &amp; FAQ</a>
+    <a href="/blog/">Journal</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+{{ content | safe }}
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="/Assets/Circular Logo.png" alt="Pivotal Tides" class="footer-logo-img">
+      <div class="footer-title">Pivotal Tides · Therapy for Growth &amp; Healing</div>
+      <p>Marriage and family therapy serving the Inland Empire &mdash; Murrieta, Temecula, and surrounding areas. Depth-oriented, insight-focused care for individuals and couples navigating life&rsquo;s pivotal moments.</p>
+      <p style="margin-top:1.2rem;"><strong style="color:#f3e7d8;">(951) 395-6089</strong></p>
+    </div>
+    <div>
+      <div class="footer-title">Pages</div>
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/approach.html">Approach</a>
+        <a href="/rates.html">Rates &amp; FAQ</a>
+        <a href="/blog/">Journal</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Practice</div>
+      <div class="footer-links">
+        <a href="/rates.html">Fees &amp; Insurance</a>
+        <a href="/support-groups.html">Support Groups</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Pivotal Tides · All Rights Reserved</span>
+    <span>CA LMFT112463</span>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>

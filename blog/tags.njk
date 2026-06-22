@@ -1,0 +1,42 @@
+---
+pagination:
+  data: collections.postTags
+  size: 1
+  alias: tag
+layout: base.njk
+pageType: website
+permalink: "/blog/tag/{{ tag | slugify }}/"
+eleventyComputed:
+  title: "Journal · {{ tag }}"
+  seoTitle: "{{ tag }} · Pivotal Tides Journal"
+  description: "Reflections on {{ tag }} from Angelique Danza, LMFT — Pivotal Tides, serving the Inland Empire."
+---
+<section class="blog-hero content">
+  <div class="container" style="max-width:780px;text-align:center;">
+    <div class="eyebrow">Journal · Topic</div>
+    <h1>{{ tag }}</h1>
+    <p class="blog-hero-lede"><a href="/blog/" class="blog-back" style="margin:0;">&larr; All reflections</a></p>
+  </div>
+</section>
+
+<section class="section blog-list-section">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in collections.posts %}
+        {% if tag in (post.data.tags or []) %}
+        <a class="blog-card" href="{{ post.url }}">
+          <div class="blog-card-img">
+            <img src="{{ (post.data.image | assetUrl) or site.defaultImage }}" alt="{{ post.data.title }}" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">{{ post.date | readableDate }}</div>
+            <h3 class="blog-card-title">{{ post.data.title }}</h3>
+            {% if post.data.excerpt %}<p class="blog-card-excerpt">{{ post.data.excerpt }}</p>{% endif %}
+            <span class="blog-card-more">Read More &rarr;</span>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- set staticPages = [["/", "1.0", "monthly"], ["/services.html", "0.9", "monthly"], ["/approach.html", "0.8", "monthly"], ["/rates.html", "0.9", "monthly"], ["/contact.html", "0.9", "monthly"], ["/support-groups.html", "0.8", "monthly"], ["/privacy-policy.html", "0.5", "yearly"], ["/blog/", "0.8", "weekly"]] %}
+{%- for p in staticPages %}
+  <url>
+    <loc>{{ site.url }}{{ p[0] }}</loc>
+    <changefreq>{{ p[2] }}</changefreq>
+    <priority>{{ p[1] }}</priority>
+  </url>
+{%- endfor %}
+{%- for post in collections.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | isoDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{%- endfor %}
+</urlset>
