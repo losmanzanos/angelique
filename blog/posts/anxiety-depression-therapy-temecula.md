@@ -1,7 +1,7 @@
 ---
 title: "Anxiety and Depression in the Inland Empire: When to Seek Therapy and What to Expect"
 date: 2026-03-15
-image: "/Assets/Beach.jpg"
+image: "/Assets/blog/lighthouse.jpg"
 excerpt: "Anxiety and depression are among the most common reasons people seek therapy — and among the most undertreated. Here's what to know about getting support in Temecula and Murrieta."
 author: "Angelique Danza, LMFT"
 tags:

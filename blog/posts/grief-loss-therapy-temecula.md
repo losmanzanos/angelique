@@ -1,7 +1,7 @@
 ---
 title: "Grief Doesn't Have a Timeline: What Therapy for Loss Actually Looks Like"
 date: 2026-05-01
-image: "/Assets/Dunes.jpg"
+image: "/Assets/blog/sea-turtle.jpg"
 excerpt: "Grief isn't a problem to be solved or a stage to get through. It's an experience that deserves to be witnessed — at whatever pace it actually moves."
 author: "Angelique Danza, LMFT"
 tags:

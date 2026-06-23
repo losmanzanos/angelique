@@ -1,7 +1,7 @@
 ---
 title: "Recovering From Narcissistic Abuse: Rebuilding Trust in Yourself"
 date: 2026-04-15
-image: "/Assets/hero-approach.jpg"
+image: "/Assets/blog/starfish.jpg"
 excerpt: "Narcissistic abuse doesn't always leave visible marks. But the damage to your sense of self, your trust in your own perceptions, and your ability to feel safe in relationships is real — and it can be healed."
 author: "Angelique Danza, LMFT"
 tags:

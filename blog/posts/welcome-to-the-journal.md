@@ -1,7 +1,7 @@
 ---
 title: "Welcome to the Pivotal Tides Journal"
 date: 2026-06-21
-image: "/Assets/Beach.jpg"
+image: "/Assets/blog/sailboat.jpg"
 excerpt: "A space for honest reflections on growth, healing, relationships, and the small shifts that move us through life's pivotal moments."
 author: "Angelique Danza, LMFT"
 tags:

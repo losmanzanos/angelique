@@ -1,7 +1,7 @@
 ---
 title: "Therapy for Women in Temecula: Finding Support Through Life's Defining Moments"
 date: 2026-06-01
-image: "/Assets/Individual.jpg"
+image: "/Assets/blog/palm-tree.jpg"
 excerpt: "Women often spend so much energy caring for everyone else that their own emotional needs get quietly set aside. Therapy offers a space that's entirely yours."
 author: "Angelique Danza, LMFT"
 tags:

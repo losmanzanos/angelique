@@ -1,7 +1,7 @@
 ---
 title: "Making Peace With Anxiety"
 date: 2026-06-18
-image: "/Assets/Dunes.jpg"
+image: "/Assets/blog/surfboard.jpg"
 excerpt: "Anxiety isn't the enemy — it's a nervous system trying to protect you. A few gentle ways to work with it instead of against it."
 author: "Angelique Danza, LMFT"
 tags:

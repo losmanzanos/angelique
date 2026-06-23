@@ -1,7 +1,7 @@
 ---
 title: "The Emotional Weight of Infertility: Why Counseling Can Help"
 date: 2026-05-15
-image: "/Assets/Coastal Pathway.jpg"
+image: "/Assets/blog/coral.jpg"
 excerpt: "Infertility is a medical diagnosis that carries an enormous emotional burden — grief, isolation, relationship strain, and a loss of the future you had planned on. You don't have to carry it alone."
 author: "Angelique Danza, LMFT"
 tags:

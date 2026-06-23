@@ -1,7 +1,7 @@
 ---
 title: "When Conflict Becomes Connection"
 date: 2026-06-15
-image: "/Assets/couples-therapy.jpg"
+image: "/Assets/blog/anchor.jpg"
 excerpt: "The goal in a relationship isn't to stop arguing — it's to argue in a way that brings you closer. Here's what that can look like."
 author: "Angelique Danza, LMFT"
 tags:

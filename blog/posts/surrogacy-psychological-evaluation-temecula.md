@@ -1,7 +1,7 @@
 ---
 title: "Psychological Evaluations for Surrogacy: What Intended Parents and Gestational Carriers Need to Know"
 date: 2026-04-01
-image: "/Assets/Angelique.jpg"
+image: "/Assets/blog/sand-dollar.jpg"
 excerpt: "Most fertility clinics and surrogacy agencies require a psychological evaluation before moving forward with third-party reproduction. Here's what that process actually involves — and why it's more than just a box to check."
 author: "Angelique Danza, LMFT"
 tags:
